@@ -1,0 +1,108 @@
+@import "../../app.scss";
+
+.tableComponent {
+  padding: 10px;
+  .tableForm {
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // display: flex;
+    .inputs {
+      //   display: flex;
+      .descriptions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        padding: 15px;
+        gap: 40px;
+        @include responsive(phone) {
+          flex-direction: column;
+          margin-bottom: 5px;
+          padding: 15px;
+          gap: 20px;
+        }
+        .input {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+          input {
+            padding: 10px;
+            border: 0;
+            outline: none;
+            min-width: 85%;
+            background-color: lightgray;
+            border-radius: 5px;
+            @include responsive(phone) {
+              min-width: 100%;
+            }
+          }
+        }
+      }
+      .amountForm {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @include responsive(phone) {
+          flex-direction: column;
+          margin-bottom: 7px;
+          padding: 15px;
+        }
+        input {
+          padding: 3px;
+          border: 0;
+          outline: none;
+          //   min-width: 85%;
+          background-color: lightgray;
+          border-radius: 5px;
+          @include responsive(phone) {
+            min-width: 100%;
+          }
+        }
+        .totalPrice {
+          background-color: lightgray;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 15px;
+        }
+      }
+    }
+    .submitBtn {
+      margin-top: 20px;
+      background-color: blue;
+      font-size: 18px;
+      padding: 5px;
+      cursor: pointer;
+      color: white;
+      &:hover {
+        background-color: rgb(17, 17, 87);
+      }
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+  table {
+    margin-top: 20px;
+    thead {
+      background-color: lightgray;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    button {
+      border: none;
+      outline: none;
+      .DeleteIcon {
+        color: rgb(131, 11, 11);
+        cursor: pointer;
+        &:hover {
+          color: red;
+        }
+        &:active {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

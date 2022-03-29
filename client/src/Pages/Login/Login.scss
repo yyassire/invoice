@@ -1,0 +1,17 @@
+.Login {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(0, 0, 0, 0.7)),
+    url("https://www.imaweb.com/wp-content/uploads/2020/11/iwg_logo_prod_hz_24dig-invoice.png")
+      center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .wrapper {
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(110, 102, 102);
+  }
+}

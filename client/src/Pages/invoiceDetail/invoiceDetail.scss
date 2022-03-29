@@ -1,0 +1,105 @@
+.InvoiceDetail {
+  background-color: lightgray;
+  min-height: 100vh;
+  padding-top: 25px;
+  .invoiceDetailsWrapper {
+    background-color: whitesmoke;
+    max-width: 900px;
+    padding: 15px;
+    margin: auto;
+    .invoiceHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .header {
+      }
+      .invoiceBtns {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        .invoiceBtn {
+          background-color: blue;
+          // font-size: 18px;
+          padding: 5px 10px;
+          border-radius: 5px;
+          cursor: pointer;
+          color: white;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          border: none;
+          outline: none;
+          &:hover {
+            background-color: rgb(17, 17, 65);
+          }
+          &:active {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+    .senderInfo {
+      text-align: end;
+      margin-top: 35px;
+    }
+    .buyerInfo {
+      margin-top: 35px;
+    }
+    .invoiceDetails {
+      text-align: end;
+      margin-top: 35px;
+      .item {
+        margin-bottom: 5px;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+    .table {
+      margin-top: 35px;
+      thead {
+        background-color: lightgray;
+        .tableHeader {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+    .total {
+      text-align: end;
+      margin-top: 10px;
+    }
+    .personnelNote {
+      margin: 15px 0;
+      display: flex;
+      gap: 5px;
+      .noteInsign {
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .noteInfo {
+        max-width: 500px;
+      }
+    }
+    .paymentIndication {
+      margin: 10px 0;
+    }
+    hr {
+      width: 80%;
+      margin: auto;
+    }
+    .finalDetails {
+      margin: 15px;
+      line-height: 2rem;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}
+@media print {
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+}

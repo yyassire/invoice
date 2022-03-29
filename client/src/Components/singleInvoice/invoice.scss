@@ -1,0 +1,43 @@
+@import "../../app.scss";
+
+.Invoice {
+  background-color: var(--darker);
+  padding: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  //   height: 60px;
+}
+.invoiceWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--light);
+  @include responsive(phone) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 0;
+  }
+}
+.status {
+  padding: 10px 13px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @include responsive(phone) {
+    padding: 5px;
+    gap: 5px;
+  }
+  .dote {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+}
+.arrowIcon {
+  font-size: 15px;
+  color: gray;
+  @include responsive(phone) {
+    display: none !important;
+  }
+}

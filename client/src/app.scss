@@ -1,0 +1,44 @@
+:root {
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --grey: #6b7280;
+  --purple: #8b5cf6;
+  --light: #eee;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  // box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media screen and (max-width: 640px) {
+      @content;
+    }
+  }
+  @if $breakpoint == smallPhone {
+    @media screen and (max-width: 450px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == big {
+    @media screen and (max-width: 950px) {
+      @content;
+    }
+  }
+}

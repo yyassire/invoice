@@ -1,0 +1,75 @@
+@import "../../app.scss";
+
+.CreateInvoice {
+  background-color: lightgray;
+  height: 100%;
+  padding-top: 25px;
+  .invoiceForm {
+    background-color: whitesmoke;
+    max-width: 800px;
+    @include responsive(phone) {
+      max-width: 100%;
+      margin: 0 10px;
+    }
+    margin: auto;
+    .formContainer {
+      .inputSections {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        padding: 15px;
+        gap: 40px;
+        @include responsive(phone) {
+          flex-direction: column;
+          margin-bottom: 5px;
+          padding: 15px;
+          gap: 20px;
+        }
+        .input {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+          input {
+            padding: 10px;
+            border: 0;
+            outline: none;
+            min-width: 85%;
+            background-color: lightgray;
+            border-radius: 5px;
+            @include responsive(phone) {
+              min-width: 100%;
+            }
+          }
+        }
+      }
+      .note {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 15px;
+        textarea {
+          background-color: #fff;
+          padding: 0.5rem;
+          border-radius: 0.2rem;
+          margin-bottom: 2rem;
+          color: #616161;
+          border: 2px solid hsl(217, 91%, 60%, 30%);
+          outline: none;
+        }
+      }
+    }
+    .changes {
+      display: block;
+      width: 80%;
+      background-color: blue;
+      margin: 15px auto;
+      font-size: 18px;
+      padding: 10px 0;
+      cursor: pointer;
+      color: white;
+    }
+  }
+}
